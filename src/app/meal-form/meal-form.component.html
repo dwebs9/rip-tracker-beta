@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <form [formGroup]="mealForm" (ngSubmit)="onSubmit()">
+      <div class="formgroup">
+        <div class="col-6 col-md-4"></div>
+        <div class="col-6 col-md-4">
+          <mat-form-field appearance="fill">
+            <input matInput id="title" type="text" formControlName="title" placeholder="Title">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+
+            <input matInput id="carbs" type="text" formControlName="carbs" placeholder="Carbs">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+
+            <input matInput id="protein" type="text" formControlName="protein" placeholder="Protein">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <input matInput id="fats" type="text" formControlName="fats" placeholder="Fats">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <input matInput id="notes" type="text" formControlName="note" placeholder="Notes">
+          </mat-form-field>
+          <div ><button type="submit" class="btn btn-primary" [disabled]="!mealForm.valid">Submit</button></div>
+      
+
+        </div>
+
+
+        <div class="col-6 col-md-4"></div>
+
+      </div>
+      <div class="row"></div>
+    </form>
+  </div>
+</div>
+<p>Form Status: {{ mealForm.status }}</p>
+<hr>
+
+Value: {{mealForm.value | json}}
