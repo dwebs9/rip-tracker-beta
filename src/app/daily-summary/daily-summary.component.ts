@@ -30,4 +30,4 @@ export class DailySummaryComponent implements OnInit {
 
   }
 
-}
+}git
