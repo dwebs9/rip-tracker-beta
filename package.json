@@ -1,6 +1,8 @@
 {
   "name": "food-diary",
   "version": "0.0.0",
+
+  "type":"commonjs",
   "scripts": {
     "heroku-postbuild": "ng build",
     "ng": "ng",
